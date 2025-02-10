@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import PropTypes from "prop-types";
 import {
   StateControlWrapper,
   StyledInput,
@@ -8,7 +7,7 @@ import {
 } from "../styles/StyledComponents";
 import { MessageContext } from "../contexts/messageContext";
 
-function StateControl({ onMessageChange }) {
+function StateControl() {
   const [inputValue, setInputValue] = useState("");
 
   const {setMessage : onMessageChange} = useContext(MessageContext)
@@ -45,8 +44,5 @@ function StateControl({ onMessageChange }) {
   );
 }
 
-StateControl.propTypes = {
-  onMessageChange: PropTypes.func.isRequired,
-};
 
 export default StateControl;
