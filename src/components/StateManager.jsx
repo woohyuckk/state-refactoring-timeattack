@@ -1,5 +1,4 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
 import {
   StateControlWrapper,
   StyledInput,
@@ -46,8 +45,5 @@ function StateControl() {
   );
 }
 
-StateControl.propTypes = {
-  onMessageChange: PropTypes.func.isRequired,
-};
 
 export default StateControl;
